@@ -8,7 +8,7 @@ extern crate panic_halt; // panic handler
 pub use cortex_m_rt::entry;
 pub use f3::{
     hal::{delay::Delay, prelude},
-    led::Leds,
+    led::{Led, Leds},
 };
 
 use f3::hal::{prelude::*, stm32f30x};

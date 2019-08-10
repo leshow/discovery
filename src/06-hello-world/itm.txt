@@ -1,0 +1,3 @@
+Hello, world!
+panicked at 'Hello, world!', src/06-hello-world/src/main.rs:13:5
+panicked at 'Hello, world!', src/06-hello-world/src/main.rs:13:5
