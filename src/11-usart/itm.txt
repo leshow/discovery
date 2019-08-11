@@ -145,3 +145,73 @@
 read value d
 read value 
 got newline char
+read value k
+read value e
+read value y
+read value 
+got newline char
+read value f
+read value u
+read value c
+read value k
+read value  
+read value y
+read value o
+read value u
+read value 
+got newline char
+read value u
+read value o
+read value y
+read value k
+read value c
+read value u
+read value f
+read value 
+got newline char
+read value f
+read value o
+read value o
+read value b
+read value a
+read value r
+read value 
+got newline char
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value d
+read value d
+read value d
+read value d
+read value d
+read value d
+read value d
+read value d
+read value d
+read value d
+buffer full
+read value d
+buffer full
+read value d
+buffer full

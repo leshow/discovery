@@ -69,21 +69,21 @@ fn main() -> ! {
     // echo server
     let mut echo = Echo { usart1 };
     let mut buf: Vec<u8, consts::U32> = Vec::new();
-    'outer: loop {
+    'main: loop {
         buf.clear();
         // busy wait on rxne register -- tells us that
-        'inner: loop {
+        loop {
             let data = echo.read_byte();
             iprintln!(&mut itm.stim[0], "read value {}", data as char);
             if data == b'\r' {
                 iprintln!(&mut itm.stim[0], "got newline char");
                 buf.reverse();
-                break 'inner;
+                break;
             }
             let res = buf.push(data);
             if res.is_err() {
                 iprintln!(&mut itm.stim[0], "buffer full");
-                continue 'outer;
+                continue 'main;
             }
         }
         // send data back to receiver
