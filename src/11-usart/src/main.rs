@@ -37,9 +37,18 @@ impl Write for SerialPort {
 fn main() -> ! {
     let (usart1, mono_timer, mut itm) = aux11::init();
 
-    let mut serial = SerialPort { usart1 };
+    // send
+    // let mut serial = SerialPort { usart1 };
+    // uprintln!(serial, "Hello friend {}", 13 + 3);
 
-    uprintln!(serial, "Hello friend {}", 13 + 3);
+    // receive
+    loop {
+        // busy wait on rxne register -- tells us that
+        while usart1.isr.read().rxne().bit_is_clear() {}
+        let data = usart1.rdr.read().rdr().bits() as u8;
+        aux11::bkpt();
+    }
+
     // Original program before macro:
     // while usart1.isr.read().txe().bit_is_clear() {}
     // usart1.tdr.write(|w| w.tdr().bits(u16::from(b'\n')));
