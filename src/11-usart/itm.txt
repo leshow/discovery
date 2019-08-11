@@ -2,3 +2,146 @@
 for loop took 30365 ticks (3795.625 us)
 for loop took 30366 ticks (3795.75 us)
 for loop took 30366 ticks (3795.75 us)
+panicked at 'Failed to push: 100', src/libcore/result.rs:999:5
+read value 107
+read value 100
+read value 106
+read value 102
+read value 108
+read value 32
+read value 107
+read value 100
+read value 107
+read value 100
+read value 13
+read value 13
+read value 104
+read value 101
+read value 108
+read value 111
+read value 108
+read value 32
+read value 116
+read value 104
+read value 101
+read value 114
+read value 101
+read value 13
+got newline char for [104, 101, 108, 111, 108, 32, 116, 104, 101, 114, 101]
+read value 104
+read value 101
+read value 108
+read value 108
+read value 111
+read value 32
+read value 116
+read value 104
+read value 101
+read value 114
+read value 101
+read value 13
+got newline char for [104, 101, 108, 108, 111, 32, 116, 104, 101, 114, 101]
+read value f
+read value o
+read value o
+read value b
+read value a
+read value r
+read value 
+got newline char
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+buffer full
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value 
+got newline char
+read value j
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value k
+read value d
+read value 
+got newline char
+read value h
+read value e
+read value l
+read value l
+read value o
+read value  
+read value f
+read value r
+read value i
+read value e
+read value n
+read value d
+read value 
+got newline char
+read value h
+read value e
+read value l
+read value l
+read value o
+read value  
+read value t
+read value h
+read value e
+read value r
+read value e
+read value  
+read value f
+read value r
+read value i
+read value e
+read value n
+read value d
+read value 
+got newline char
