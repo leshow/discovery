@@ -1,0 +1,4 @@
+for loop took 18936 ticks (2367 us)
+for loop took 30365 ticks (3795.625 us)
+for loop took 30366 ticks (3795.75 us)
+for loop took 30366 ticks (3795.75 us)

@@ -1,0 +1,1 @@
+panicked at 'attempt to multiply with overflow', src/09-clocks-and-timers/src/main.rs:10:18
