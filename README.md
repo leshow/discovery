@@ -1,4 +1,6 @@
-# `Discovery`
+# `Discovery (Solutions)`
+
+These are my solutions for the discovery book, a wonderful book on embedded programming in Rust:
 
 > Discover the world of microcontrollers through Rust
 
