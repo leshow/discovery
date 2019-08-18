@@ -11,14 +11,28 @@ use m::Float;
 fn main() -> ! {
     let (mut leds, mut lsm303dlhc, mut delay, mut itm) = aux15::init();
 
+    const XY_GAIN: f32 = 1100.;
+    const Z_GAIN: f32 = 980.;
     // pointing north: I16x3 { x: -187, y: -195, z: -534 }
     // rotate 90 I16x3 { x: 89, y: -243, z: -601 }
     // rotate 90 again I16x3 { x: 78, y: 71, z: -631 }
     loop {
-        let I16x3 { x, y, .. } = lsm303dlhc.mag().unwrap();
+        let I16x3 { x, y, z } = lsm303dlhc.mag().unwrap();
 
+        // iprintln!(&mut itm.stim[0], "{}\t{}\t{}", x, y, z);
+
+        let x = f32::from(x) / XY_GAIN; // get value in Gauss
+        let y = f32::from(y) / XY_GAIN; // Gauss
+        let z = f32::from(z) / Z_GAIN; // Gauss
+
+        let mag = (x * x + y * y + z * z).sqrt();
+        // I wouldn't think rotating the board would change the value but it does, apparently.
+        // Also, I'm really far north (540 - 630 mG)
+
+        iprintln!(&mut itm.stim[0], "{:?} mG", mag * 1_000.);
+
+        // compass code
         let theta = f32::from(y).atan2(f32::from(x)); // radians
-
         let dir = if theta < -PI / 1.125 {
             Direction::North
         } else if theta < -PI / 1.5 {
@@ -50,7 +64,6 @@ fn main() -> ! {
             led.off();
         }
         leds[dir].on();
-        // iprintln!(&mut itm.stim[0], "{:?}", (x, y));
         delay.delay_ms(100_u16);
     }
 }
