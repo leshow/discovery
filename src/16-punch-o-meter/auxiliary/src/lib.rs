@@ -8,7 +8,7 @@ extern crate panic_itm; // panic handler
 pub use cortex_m::{asm::bkpt, iprint, iprintln, peripheral::ITM};
 pub use cortex_m_rt::entry;
 pub use f3::{
-    hal::{delay::Delay, prelude, time::MonoTimer},
+    hal::{delay::Delay, time::Instant, prelude, time::MonoTimer},
     lsm303dlhc::{I16x3, Sensitivity},
     Lsm303dlhc,
 };
